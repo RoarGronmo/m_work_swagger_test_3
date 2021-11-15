@@ -24,7 +24,8 @@ abstract class MWorkApi extends ChopperService {
     final newClient = ChopperClient(
         services: [_$MWorkApi()],
         converter: $JsonSerializableConverter(),
-        baseUrl: 'https://');
+        baseUrl: 'https://',
+    );
     return _$MWorkApi(newClient);
   }
 
@@ -40,7 +41,7 @@ abstract class MWorkApi extends ChopperService {
   Future<chopper.Response<TxtIEnumerableResult>> orderFirmsFrmNoTextsGet(
       {@Path('frmNo') required int? frmNo,
       @Query('txtTp') TextTp? txtTp,
-      @Query('lang') int? lang});
+      @Query('lang') int? lang,});
 
   ///
   ///@param frmNo

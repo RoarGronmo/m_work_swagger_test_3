@@ -19,7 +19,11 @@ class _$MWorkApi extends MWorkApi {
   @override
   Future<Response<StringInt32IDictionaryResult>> orderTextTypesGet() {
     final $url = '/Order/textTypes';
-    final $request = Request('GET', $url, client.baseUrl);
+    final $request = Request(
+        'GET',
+        $url,
+        client.baseUrl
+    );
     return client.send<StringInt32IDictionaryResult,
         StringInt32IDictionaryResult>($request);
   }
